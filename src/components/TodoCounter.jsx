@@ -1,6 +1,6 @@
-function TodoCounter ({ total, completed }) {
+function TodoCounter({ total, completed }) {
   return (
-    <div className="text-center text-white mt-7 mb-5"> 
+    <div className="text-center text-white mt-7 mb-5">
       <h1 className="font-bold text-4xl">TODO Mylo</h1>
       <h2 className="font-semibold text-2xl mt-5">
         {
