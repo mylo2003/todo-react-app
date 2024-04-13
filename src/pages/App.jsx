@@ -4,11 +4,13 @@ import { TodoSearch } from '../components/TodoSearch.jsx';
 import { TodoList } from '../components/TodoList.jsx';
 import { TodoItem } from '../components/TodoItem.jsx';
 import { CreateTodoBtn } from '../components/CreateTodoBtn.jsx';
+import { LoadingTodo } from '../components/LoadingTodo.jsx';
+import { SearchingTodo } from '../components/SearchingTodo.jsx';
 import { useLocalStorage } from '../hooks/useLocalStorage.jsx';
 import '../styles/index.css';
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
 
   const completedTodos = todos.filter(todo => todo.completed).length;
@@ -45,13 +47,19 @@ function App() {
 
   return (
     <>
-      <TodoCounter completed={completedTodos} total={totalTodos} />
+      <TodoCounter completed={completedTodos} total={totalTodos} loading={loading}/>
       <TodoSearch
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
 
       <TodoList>
+        {loading && 
+          <LoadingTodo/>
+        }
+        {error && <p>Hubo un error!!</p>}
+        {(!loading && searchedTodos.length == 0) && <SearchingTodo/>}
+
         {searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}
@@ -62,7 +70,7 @@ function App() {
           />
         ))}
       </TodoList>
-      <CreateTodoBtn />
+      <CreateTodoBtn/>
     </>
   )
 }
