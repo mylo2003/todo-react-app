@@ -1,8 +1,13 @@
-# React + Vite
+# TO-DO Mylo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue realizado con el objetivo de aprender React.
+Construí un TO-DO App desde 0.
+En este proyecto aprendí el manejo de estados, así como el uso de contextos y hooks, entre otras muchas funcionalidades que nos ofrece React!
+Además lo estilicé con tailwind para mejor productividad.
 
-Currently, two official plugins are available:
+## 🛠 Tech
+React, Vite, TailwindCSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## 🔗 Links
+[![TO-DO Mylo](https://todo-react-app-zeta-two.vercel.app/)

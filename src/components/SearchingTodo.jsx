@@ -7,7 +7,7 @@ function SearchingTodo() {
         <div className="w-4 h-4 rounded-full bg-slate-400 animate-bounce [animation-delay:-.5s]"></div>
       </div>
     </>
-  )
+  );
 }
 
 export { SearchingTodo };

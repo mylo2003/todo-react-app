@@ -26,7 +26,7 @@ function LoadingTodo() {
       <div className="absolute bottom-7 right-0 h-6 w-6 rounded-full bg-slate-400"></div>
     </div>
     </>
-  )
+  );
 }
 
 export { LoadingTodo };

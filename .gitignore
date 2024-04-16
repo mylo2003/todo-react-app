@@ -23,11 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-public/
-src/assets/
-src/css/
-
-.eslintrc.cjs
-postcss.config.js
-tailwind.config.js
-vite.config.js
+dist/
